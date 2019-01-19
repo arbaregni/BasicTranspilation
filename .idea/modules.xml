@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BasicTranspilation.iml" filepath="$PROJECT_DIR$/BasicTranspilation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic_transpilation.iml" filepath="$PROJECT_DIR$/basic_transpilation.iml" />
     </modules>
   </component>
 </project>

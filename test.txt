@@ -1,0 +1,7 @@
+(func swap a string b string -> void
+    (declare string temp a
+        (assign a b)
+        (assign b temp)
+    )
+)
+(swap "fox" "trot")

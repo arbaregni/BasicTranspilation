@@ -1,0 +1,30 @@
+run this command:
+C:\Users\james\Documents\Scripting\BasicTranspilation\target\debug\BasicTranspilation.exe C:\Users\james\Documents\Scripting\BasicTranspilation\test.txt C:\Users\james\Documents\Scripting\BasicTranspilation\out.txt
+
+
+
+
+
+TODO
+
+
+CURRENTLY: user defined functions
+
+LONG TERM
+
+- user defined classes (structs), tagged unions
+- (embed $ident args...) command
+- niceify builtins
+- (format args...) command
+- inputs, quality-of-life type things
+- scientific notation
+- fix weird tokenization rules (with parents?)
+- add commenting
+- type inference in declare statements
+
+
+- create a nice syntax guide
+
+COMMAND LINE THINGS
+- write to a file instead of printing out
+- do nice flags and stuff
