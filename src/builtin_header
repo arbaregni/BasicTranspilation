@@ -1,0 +1,235 @@
+func equals
+  string string -> boole
+({0}={1})
+
+--------------------
+func equals
+  int int -> boole
+({0}={1})
+
+--------------------
+func equals
+  boole boole -> boole
+({0}={1})
+
+--------------------
+func not-equals
+  string string -> boole
+({0}≠{1})
+
+--------------------
+func not-equals
+  int int -> boole
+({0}≠{1})
+
+--------------------
+func not-equals
+  boole boole -> boole
+({0}≠{1})
+
+--------------------
+func lesser
+  int int -> boole
+({0}<{1})
+
+--------------------
+func lesser
+  real real -> boole
+({0}<{1})
+
+--------------------
+func lesser-equal
+  int int -> boole
+({0}≤{1})
+
+--------------------
+func lesser-equal
+  real real -> boole
+({0}≤{1})
+
+--------------------
+func greater
+  int int -> boole
+({0}>{1})
+
+--------------------
+func greater
+  real real -> boole
+({0}>{1})
+
+--------------------
+func greater-equal
+  int int -> boole
+({0}≥{1})
+
+--------------------
+func greater-equal
+  real real -> boole
+({0}≥{1})
+
+--------------------
+func not
+  boole -> boole
+not({0})
+
+--------------------
+func and
+  boole boole -> boole
+({0} and {1})
+
+--------------------
+func or
+  boole boole -> boole
+({0} or {1})
+
+--------------------
+func xor
+  boole boole -> boole
+({0} xor {1})
+
+--------------------
+func add
+  int int -> int
+({0}+{1})
+
+--------------------
+func add
+  real real -> real
+({0}+{1})
+
+--------------------
+func sub
+  int int -> int
+({0}-{1})
+
+--------------------
+func sub
+  real real -> real
+({0}-{1})
+
+--------------------
+func mul
+  int int -> int
+({0}*{1})
+
+--------------------
+func mul
+  real real -> real
+({0}*{1})
+
+--------------------
+func div
+  int int -> real
+({0}/{1})
+
+--------------------
+func div
+  real real -> real
+({0}/{1})
+
+--------------------
+func rem
+  int int -> int
+remainder({0},{1})
+
+--------------------
+func rem
+  real int -> real
+remainder(iPart({0}),{1})+fPart({0})
+
+--------------------
+func pow
+  int int -> int
+({0}^{1})
+
+--------------------
+func pow
+  real real -> real
+({0}^{1})
+
+--------------------
+func nat-exp
+  real -> real
+^({0})
+
+--------------------
+func nat-log
+  real -> real
+ln({0})
+
+--------------------
+func nat-exp
+  int -> real
+^({0})
+
+--------------------
+func nat-log
+  int -> real
+ln({0})
+
+--------------------
+func rand-uniform
+  -> real
+rand
+
+--------------------
+func rand-int
+  int int -> int
+randInt({0},{1})
+
+--------------------
+func print
+  string -> void
+
+Disp {0}
+--------------------
+func print
+  int -> void
+
+Disp {0}
+--------------------
+func print
+  real -> void
+
+Disp {0}
+--------------------
+func print
+  boole -> void
+
+Disp {0}
+--------------------
+func print
+  void -> void
+
+Disp "void"
+--------------------
+func scroll-print
+  string -> void
+
+Pause {0}
+--------------------
+func scroll-print
+  int -> void
+
+Pause {0}
+--------------------
+func scroll-print
+  real -> void
+
+Pause {0}
+--------------------
+func scroll-print
+  boole -> void
+
+Pause {0}
+--------------------
+func scroll-print
+  void -> void
+
+Pause "void"
+--------------------
+func pause
+  -> void
+
+Pause
+--------------------

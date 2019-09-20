@@ -1,26 +1,51 @@
 run this command:
+
 C:\Users\james\Documents\Scripting\BasicTranspilation\target\debug\BasicTranspilation.exe C:\Users\james\Documents\Scripting\BasicTranspilation\test.txt C:\Users\james\Documents\Scripting\BasicTranspilation\out.txt
 
 
+TODO make sure that the lAUX augmenting works
+check switch program
 
 
+CURRENTLY:
 
-TODO
+- the great MEM switch over
+- values can now address into MEM, or address into RES, or address into ARG
+also have sizes
+
+ValRepr::FixedSizeAddress{list: "MEM", size: 1}
+this could be like an integer or something that's referenced inside the mem list
+ValRepr::FixedSizeAddress{list: "RES", size: 2}
+this could be a two-valued return from a function call
 
 
-CURRENTLY: user defined functions
 
 LONG TERM
-
-- user defined classes (structs), tagged unions
-- (embed $ident args...) command
-- niceify builtins
-- (format args...) command
+- upgrade the building + variablization system
+    - wishlist:
+       1. simpler
+       2. request based?
+       3. allows for constant folding
+       4. intermediate representation
+       5. allows for annottating code (i.e. why is this here? what is this line a part of?)
+       6. tracks variables usage + streamlines it
+-  tagged unions
+- (embed $ident args...) command ??? <-- or else some easy way to implement all of those
 - inputs, quality-of-life type things
+- block-print:
+    1→A
+    While A+26≤length(Str0
+    Disp sub(Str0,A,26
+    Pause
+    A+26→A
+    End
+    Disp sub(Str0,A,1+length(Str0)-A
+    TODO: split every seventh line
+          lower case are techinaclly tokens
 - scientific notation
 - fix weird tokenization rules (with parents?)
 - add commenting
-- type inference in declare statements
+
 
 
 - create a nice syntax guide

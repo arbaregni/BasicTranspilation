@@ -59,6 +59,7 @@ pub fn tokenize(source: &str) -> Vec<Token> {
             token_begin = i;
         }
 
+        // whitespace means end the current token
         if ch.is_whitespace() {
             if token_len != 0 {
                 tokens.push(Token::new(token_begin, token_len));
@@ -68,13 +69,15 @@ pub fn tokenize(source: &str) -> Vec<Token> {
             continue;
         }
 
+        // enclose strings
         if token_len == 0 && ch == '"' {
             let quote_begin = i;
             i += 1;
             while i < source.len() && &source[i..i+1] != "\"" {
-                if &source[i..i+1] == "\\" {
+                // TI-84 basic does not have escape characters in strings
+                /*if &source[i..i+1] == "\\" {
                     i += 1;
-                }
+                }*/
                 i += 1;
             }
             let quote_len = i + 1 - quote_begin;
@@ -82,7 +85,8 @@ pub fn tokenize(source: &str) -> Vec<Token> {
             continue;
         }
 
-        if ch == '{' || ch == '}' || ch == '[' || ch == ']' || ch == '(' || ch == ')' {
+        // singular symbols that are tokens in and of themselves
+        if ch == '{' || ch == '}' || ch == '[' || ch == ']' || ch == '(' || ch == ')' || ch == ':' {
             if token_len != 0 {
                 tokens.push(Token::new(token_begin, token_len));
                 token_begin = 0;

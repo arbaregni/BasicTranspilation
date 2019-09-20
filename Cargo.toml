@@ -4,4 +4,4 @@ version = "0.1.0"
 authors = ["arbaregni <jamesnsours@gmail.com>"]
 
 [dependencies]
-lazy_static = "1.2.0"
+take_mut = "0.2.2"

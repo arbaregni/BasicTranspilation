@@ -1,7 +1,5 @@
-(func swap a string b string -> void
-    (declare string temp a
-        (assign a b)
-        (assign b temp)
-    )
+(func pythag a: real b: real -> real
+    (pow (add (pow a 2.0) (pow b 2.0)) .5)
 )
-(swap "fox" "trot")
+
+(print (pythag 3.0 4.0))

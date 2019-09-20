@@ -1,23 +1,18 @@
-""→Str0
-{}→⌊RES
-{}→⌊ARGS
-0→⌊ARGS(dim(⌊ARGS)+1)
-Str0+"fox trot"→Str0
-dim(Str0)-length("fox trot")+idim(Str0)→⌊ARGS(dim(⌊ARGS)+1)
-0→⌊ARGS(dim(⌊ARGS)+1)
+{0}→⌊RES
+{0}→⌊ARGS
+3→dim(⌊AUX
+0→⌊AUX(3)
+3.0→⌊AUX(2)
+4.0→⌊AUX(1)
+augment(⌊ARGS,⌊AUX→⌊ARGS
 Goto A
 Lbl B
-dim(⌊ARGS)-3→dim(⌊ARGS)
+dim(⌊ARGS)-3→dim(⌊ARGS
+⌊RES(dim(⌊RES))→A
+Disp A
+
 Return
 Lbl A
-If (substring(Str0, real(⌊ARGS(dim(⌊ARGS)-1)), imag(⌊ARGS(dim(⌊ARGS)-1)))="marry-anne")
-Then
-Disp "we have a winner"
-→⌊ARGS(dim(⌊ARGS)-2)
-Else
-Disp "you lost"
-→⌊ARGS(dim(⌊ARGS)-2)
-End
-⌊ARGS(dim(⌊ARGS)-2)→⌊RES(dim(⌊RES)+1)
+(((⌊ARGS(dim(⌊ARGS)-1)^2.0)+(⌊ARGS(dim(⌊ARGS)-2)^2.0))^.5)→⌊RES(dim(⌊RES)+1)
 If ⌊ARGS(dim(⌊ARGS))=0
 Goto B

@@ -1,6 +1,10 @@
+LARGS : [locals][arguments][call id]
+
 HOW TO ADD MORE BUILTINS
 1. add the variant in sexprizer.rs
 2. define how to parse into this builtin (in fn make_compound)
 3. add the scoping rules
 4. add the type-checking
-5. add the building instructions
+5. define how it uses variables
+6. add the building instructions
+
